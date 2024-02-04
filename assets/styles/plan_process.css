@@ -1,0 +1,325 @@
+/* 
+
+font-family: 'Darumadrop One', sans-serif;
+font-family: 'Yomogi', cursive;
+
+#1c8ea2
+#ffbd00
+#ff9900
+#2b9264
+#ddd2ba
+#fffae8
+#1a1a1a
+
+*/
+
+li {
+    color: #1a1a1a;
+    font-size: 20px;
+}
+
+i {
+    color: #2b9264;
+}
+
+/* サイト例ができたらこのボタンを設置する！！！！！！！！ */
+/* .plan-right button{
+    display: none;
+} */
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+.title-container {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+}
+
+.top-title {
+    width: 70%;
+    margin: auto;
+    padding-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.top-title h3 {
+    padding-left: 5px;
+}
+
+/* plan main ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.plan-main {
+    width: 100%;
+    padding: 40px auto;
+    background-color: #fffae8;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan-main img {
+    width: 55%;
+    margin-top: 18px;
+}
+
+.plans-container {
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.plans-container h4 {
+    font-size: 36px;
+}
+
+/* 値段と説明タイトル h5 */
+.plans-container h5 {
+    font-size: 22px;
+    line-height: 20px;
+}
+
+.plans-container h5 span {
+    font-size: 18px;
+}
+
+.plans-container ul {
+    margin: 20px auto;
+}
+
+/* button */
+.plans-container button {
+    width: 230px;
+    margin: 10% auto;
+}
+
+.f-color {
+    /* color: #2b9264; */
+    font-size: 24px;
+    margin: 8px;
+}
+
+.basic-plan,
+.standard-plan,
+.premium-plan {
+    width: 95%;
+    max-width: 350px;
+
+    margin: 20px auto;
+    padding: 0 6%;
+
+    border-radius: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* basic plan */
+.basic-plan {
+    border: 8px dashed #1c8ea2;
+}
+
+.basic-plan .plan-tx-top i {
+    color: #1c8ea2;
+}
+
+/* standard plan */
+.standard-plan {
+    border: 8px dashed #ffbd00;
+}
+
+.standard-plan .plan-tx-top i {
+    color: #ffbd00;
+}
+
+/* premium plan */
+.premium-plan {
+    border: 8px dashed #ff9900;
+}
+
+.premium-plan .plan-tx-top i {
+    color: #ff9900;
+}
+
+/* plan-tx-top */
+.plan-tx-top {
+    margin-bottom: 10px;
+}
+
+.plan-tx-top li {
+    font-size: 24px;
+}
+
+.plan-tx-top li i {
+    font-size: 24px;
+}
+
+/* plan-tx-btm */
+.plan-tx-btm {
+    padding-left: 1%;
+}
+
+/* plan-left, plan-right */
+.plan-left,
+.plan-right {
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan-left img {
+    width: 30%;
+}
+
+.plan-left ul li {
+    text-wrap: nowrap;
+}
+
+/* can-cannot ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.can-cannot {
+    width: 100%;
+    padding: 20px 6%;
+    background-color: #ffbd00;
+}
+
+.Q-box{
+    width: 100%;
+    margin: 10px auto;
+}
+
+.Q-box p{
+    font-size: 18px;
+}
+
+/* process ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.process-container {
+    width: 100%;
+    padding: 0 6%;
+    margin: 40px auto;
+}
+
+.process-acco {
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+
+    list-style: none;
+}
+
+.process-acco li {
+    margin: 12px 0;
+}
+
+.process-acco section {
+    border: 4px solid #2b9264;
+    border-radius: 15px 0 0 15px;
+}
+
+/* .process-acco li:nth-child(1) section,
+.process-acco li:nth-child(2) section {
+    border-color: #1c8ea2;
+}
+
+.process-acco li:nth-child(3) section,
+.process-acco li:nth-child(4) section,
+.process-acco li:nth-child(5) section {
+    border-color: #ffbd00;
+}
+
+.process-acco li:nth-child(6) section,
+.process-acco li:nth-child(7) section,
+.process-acco li:nth-child(8) section {
+    border-color: #ff9900;
+} */
+
+/*アコーディオンタイトル*/
+.acco-title {
+    position: relative; /*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all 0.5s ease;
+}
+
+/*アイコンの＋と×*/
+.acco-title::before,
+.acco-title::after {
+    width: 15px;
+    height: 4px;
+
+    position: absolute;
+    content: "";
+
+    border-radius: 50px;
+    background-color: #2b9264;
+}
+.acco-title::before {
+    top: 48%;
+    left: 15px;
+    transform: rotate(0deg);
+}
+.acco-title::after {
+    top: 48%;
+    left: 15px;
+    transform: rotate(90deg);
+}
+/*　closeというクラスがついたら形状変化　*/
+.acco-title.close::before {
+    transform: rotate(45deg);
+}
+
+.acco-title.close::after {
+    transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.acco-box {
+    margin: 0 3% 3% 3%;
+    padding: 3%;
+
+    display: none; /*はじめは非表示*/
+    /* background: #f3f3f3; */
+    background: #d2e7de;
+
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .basic-plan,
+    .standard-plan,
+    .premium-plan {
+        max-width: 900px;
+        flex-direction: row;
+
+        padding: 3% 6%;
+    }
+
+    h5.f-color {
+        font-size: 28px;
+        margin: 8px;
+    }
+
+
+    /* 注意事項 */
+    .Q-box{
+        max-width: 800px;
+    }
+
+    .Q-box p{
+        font-size: 24px;
+    }
+
+    /* process */
+    .process-acco {
+        max-width: 900px;
+    }
+}

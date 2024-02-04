@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>harapaca craft</title>
+        <link rel="stylesheet" href="assets/styles/style.css" />
+    </head>
+    <body>
+        <div class="body-container">
+            <nav>
+                <!-- menu bar -->
+                <div class="open-btn2">
+                    <div class="nav-cir1"></div>
+                    <div class="nav-cir2"></div>
+                    <div class="nav-cir3"></div>
+
+                    <span></span>
+                    <span></span>
+
+                    <h6>menu</h6>
+                </div>
+
+                <!-- sns -->
+                <div class="nav-sns">
+                    <a href="https://www.instagram.com/harapaca.craft" class="sns-inst">
+                        <img src="assets/images/sns-inst.png" alt="" />
+                    </a>
+                    <a href="https://twitter.com/HaRa_uopeople" class="sns-x">
+                        <img src="assets/images/sns-x.png" alt="" />
+                    </a>
+                </div>
+
+                <!-- nav overlay -->
+                <div class="nav-overlay">
+                    <div class="overlay-content">
+                        <ul>
+                            <li>
+                                <a href="index.html" class="navClose">
+                                    <span>Top</span>
+                                    ページトップ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about_us.html" class="navClose">
+                                    <span>About Me</span>
+                                    私について
+                                </a>
+                            </li>
+                            <li>
+                                <a href="plan_process.html" class="navClose">
+                                    <span>Plan & Process</span>
+                                    料金プランと制作プロセス
+                                </a>
+                            </li>
+                            <li>
+                                <a href="works_reviews.html" class="navClose">
+                                    <span>Works & Reviews</span>
+                                    実績とお客様の声
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#contact" class="navClose">
+                                    <span>Contact Us</span>
+                                    お問い合わせ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- sect-top^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+            <section class="sect-top" id="sect_top">
+                <div class="top-container">
+                    <div class="top-cont-tx">
+                        <h1>
+                            はらぱか<br />
+                            <span>クラフト</span>
+                        </h1>
+                    </div>
+
+                    <!-- <h1>
+                        イラストレーションと<br />
+                        プログラミングができる<br />
+                        Webデザイナーです。
+                    </h1> -->
+
+                    <div class="top-cont-img">
+                        <img class="img-banner" src="assets/images/banner.jpg" alt="" />
+                    </div>
+                </div>
+
+                <button class="btn-top"><a href="#sect_main" class="smooth-scroll">start</a></button>
+            </section>
+
+            <!-- main ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+            <section class="sect-main" id="sect_main">
+                <div class="ep-container">
+                    <div class="main-ep1">
+                        <a href="about_us.html" class="fadeIn1Trigger">
+                            <img src="assets/images/aboutus.png" alt="" />
+                        </a>
+                    </div>
+                    <!-- ticker -->
+                    <!-- <div class="marqueeContainer1" id="marqueeContainer">
+                        <span id="marqueeText1">Episode 1: About Us. Episode 1: About Us.Episode 1: About Us. Episode 1: About Us.</span>
+                    </div> -->
+
+                    <div class="main-ep2">
+                        <a href="plan_process.html" class="fadeIn2Trigger">
+                            <img src="assets/images/plan-process.png" alt="" />
+                        </a>
+                    </div>
+                    <!-- ticker -->
+                    <!-- <div class="marqueeContainer2" id="marqueeContainer">
+                        <span id="marqueeText2">Episode 2: Plan & Process. Episode 2: Plan & Process.Episode 2: Plan & Process. Episode 2: Plan & Process.</span>
+                    </div> -->
+
+                    <div class="main-ep3">
+                        <a href="works_reviews.html" class="fadeIn3Trigger">
+                            <img src="assets/images/works-reviews.png" alt="" />
+                        </a>
+                    </div>
+                    <!-- ticker -->
+                    <!-- <div class="marqueeContainer3" id="marqueeContainer">
+                        <span id="marqueeText1">Episode 3:Works & Reviews. Episode 3:Works & Reviews.Episode 3:Works & Reviews. Episode 3:Works & Reviews.</span>
+                    </div> -->
+                </div>
+            </section>
+            <section class="sect-contact" id="contact">
+                <div class="contact-container">
+                    <div class="sub-title">
+                        <h3>お問い合わせ</h3>
+                        <h2>Contact Us</h2>
+                    </div>
+                    <img class="img-cont-top" src="assets/images/contact-top.png" alt="" />
+
+                    <div class="contact-inst">
+                        <img src="assets/images/sns-inst.png" alt="" />
+                        <p>ご相談・ご依頼はDMでも承ります。</p>
+                    </div>
+                    <div class="contact-mail">
+                        <img src="assets/images/mail-icon.PNG" alt="" />
+                        <p>yuri.harada504@gmail.com</p>
+                    </div>
+
+                    <!-- contact form -->
+                    <div class="contact-form">
+                        <form action="assets/php/contact.php" method="post">
+                            <div class="input-group">
+                                <label for="name">お名前</label>
+                                <input type="text" name="お名前" id="name" required />
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">メールアドレス</label>
+                                <input type="email" name="メールアドレス" id="email" required />
+                            </div>
+
+                            <div class="input-group">
+                                <label for="message">メッセージ本文</label>
+                                <textarea name="メッセージ本文" id="message" rows="5" required></textarea>
+                            </div>
+
+                            <div class="input-group">
+                                <button type="submit">送信</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer">
+                <img src="assets/images/footer-logo.png" alt="" />
+            </footer>
+        </div>
+
+        <!-- scripts -->
+        <script src="https://kit.fontawesome.com/bb1ec9ad9e.js" crossorigin="anonymous"></script>
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+        <script src="assets/scripts/jquery.js"></script>
+
+        <script src="assets/scripts/javascript.js"></script>
+    </body>
+</html>

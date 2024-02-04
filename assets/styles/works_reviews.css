@@ -1,0 +1,274 @@
+/* 
+
+font-family: 'Darumadrop One', sans-serif;
+font-family: 'Yomogi', cursive;
+
+#1c8ea2
+#ffbd00
+#ff9900
+#2b9264
+#ddd2ba
+#fffae8
+#1a1a1a
+
+*/
+
+.title-container {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+}
+
+.top-title {
+    width: 70%;
+    margin: auto;
+    padding-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.top-title h3 {
+    padding-left: 5px;
+}
+
+/* works main ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.works-main {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #fffae8;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .works-main img {
+    width: 55%;
+    margin-top: 18px;
+} */
+
+.works-container {
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* slider ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+.slider {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slider img {
+    width: 65vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height: auto;
+    border-radius: 50px;
+}
+
+.slider .slick-slide {
+    transform: scale(0.8); /*左右の画像のサイズを80%に*/
+    transition: all 1s; /*拡大や透過のアニメーションを0.5秒で行う*/
+    opacity: 0.5; /*透過50%*/
+}
+
+.slider .slick-slide.slick-center {
+    transform: scale(1); /*中央の画像のサイズだけ等倍に*/
+    opacity: 1; /*透過なし*/
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+    position: absolute; /*絶対配置にする*/
+    z-index: 500;
+    top: 45%;
+    cursor: pointer; /*マウスカーソルを指マークに*/
+    outline: none; /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #1c8ea2; /*矢印の色*/
+    border-right: 2px solid #1c8ea2; /*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: 3%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: 3%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px; /*ドットボタンのサイズ*/
+    height: 8px; /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: #ccc; /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+    background: #333; /*ドットボタンの現在地表示の色*/
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+.slider-desc {
+    width: 60vw;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.slider-desc li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+    font-size: 18px;
+    line-height: 22px;
+    color: #1a1a1a;
+}
+
+.slider-desc span {
+    margin-left: 5px;
+    font-size: 16px;
+    line-height: 5px;
+    color: #1c8ea2;
+}
+
+/*アコーディオンタイトル*/
+.acco-title {
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.acco-title.close i {
+    transform: rotate(180deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.acco-box {
+    display: none;
+    font-size: 14px;
+}
+
+/* reviews container ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.reviews-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 40px 0;
+
+    /* background-color: #ffbd00; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balloon-container {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.balloon {
+    position: relative;
+    padding: 20px;
+    margin: 20px auto;
+    margin-right: 5%;
+
+    background-color: #fffae8;
+    border: 4px solid #ffbd00;
+    border-radius: 50px;
+}
+
+.balloon:nth-child(even) {
+    margin-right: 0;
+    margin-left: 5%;
+    border-color: #ff9900;
+}
+
+.balloon::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 15%;
+    bottom: -15px;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid #ffbd00;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 15%;
+    bottom: -10px;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid #fffae8;
+}
+
+.balloon:nth-child(even)::before {
+    left: 70%;
+    border-top: 15px solid #ff9900;
+}
+
+.balloon:nth-child(even)::after {
+    left: 70%;
+}
+
+.ball-top{
+    margin: 4%;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .slider {
+        width: 90%;
+        max-width: 900px;
+    }
+
+    .slider a{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .slider img {
+        /* width: 60vw; */
+        width: 40vw;
+    }
+    
+    .slider-desc li {
+        margin-left: 8%;
+    }
+
+    /* reviews */
+    .reviews-container{
+        max-width: 900px;
+    }
+}

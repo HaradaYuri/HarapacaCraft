@@ -1,0 +1,76 @@
+/* 
+
+font-family: 'Darumadrop One', sans-serif;
+font-family: 'Yomogi', cursive;
+
+#1c8ea2
+#ffbd00
+#ff9900
+#2b9264
+#ddd2ba
+#fffae8
+#1a1a1a
+
+*/
+
+.title-container {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+}
+
+.top-title {
+    width: 70%;
+    margin: auto;
+    padding-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.top-title h3 {
+    padding-left: 5px;
+}
+
+/* about main ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.about-main {
+    width: 100%;
+    padding: 40px 6%;
+    background-color: #fffae8;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc1,
+.desc2,
+.desc3 {
+    width: 100%;
+    padding: 10px;
+}
+
+.desc1 h4 {
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.desc2 h4,
+.desc3 h4 {
+    margin: 10px 0;
+    /* font-size: 30px; */
+}
+
+.desc1 p,
+.desc2 p,
+.desc3 p {
+    margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px){
+    .about-main{
+        padding: 40px 16%;
+    }
+}

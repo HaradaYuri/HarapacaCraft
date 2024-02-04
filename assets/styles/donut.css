@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Potta+One&family=Yomogi&display=swap");
+/* 
+
+font-family: 'Darumadrop One', sans-serif;
+font-family: 'Potta One', system-ui;            --漢字
+font-family: 'Yomogi', cursive;                 --手書き風細字
+
+#1c8ea2
+#ffbd00
+#ff9900
+#2b9264
+#ddd2ba
+#fffae8
+#1a1a1a
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Darumadrop One", "Potta One", sans-serif;
+    background-color: #fffae8;
+}
+
+button {
+    width: 200px;
+    height: 60px;
+    margin: auto;
+    padding: 0;
+
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+
+    background-color: #2b9264;
+    border: none;
+    border-radius: 50px;
+
+    font-size: 20px;
+    font-family: "Darumadrop One", "Potta One", sans-serif;
+    color: #fffae8;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: #fffae8;
+    font-size: 20px;
+}
+
+/* container */
+
+.donut-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 100px auto;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.donut-container h1 {
+    margin: auto;
+    text-wrap: nowrap;
+}
+
+.donut-container img {
+    width: 100%;
+    max-width: 510px;
+    margin: auto;
+
+
+    object-fit: cover;
+    object-position: center;
+    transform: rotate(0);
+
+    animation: donutRotate 4s linear infinite;
+}
+
+@keyframes donutRotate {
+    0% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+
+}

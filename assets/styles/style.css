@@ -1,0 +1,797 @@
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Potta+One&family=Yomogi&display=swap");
+/* 
+
+font-family: 'Darumadrop One', sans-serif;
+font-family: 'Potta One', system-ui;            --漢字
+font-family: 'Yomogi', cursive;                 --手書き風細字
+
+#1c8ea2
+#ffbd00
+#ff9900
+#2b9264
+#ddd2ba
+#fffae8
+#1a1a1a
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Darumadrop One", "Potta One", sans-serif;
+    background-color: #ffbd00;
+}
+
+.body-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+button {
+    width: 200px;
+    height: 60px;
+    margin: auto;
+    padding: 0;
+
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+
+    background-color: #2b9264;
+    border: none;
+    border-radius: 50px;
+
+    font-size: 20px;
+    font-family: "Darumadrop One", "Potta One", sans-serif;
+    color: #fffae8;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: #fffae8;
+    font-size: 20px;
+}
+
+/* h2 h3 for footer title  */
+h2 {
+    text-align: center;
+    line-height: 30px;
+
+    font-size: 40px;
+}
+
+h3 {
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+h4 {
+    text-align: left;
+    font-size: 28px;
+}
+
+/* h5 for sub page episode title */
+h5 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h6 {
+    font-size: 20px;
+    color: #fffae8;
+}
+
+p {
+    font-size: 20px;
+}
+
+.sub-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .sub-title h2{
+    -webkit-text-stroke: 2px #1a1a1a;
+    color: #fffae8;
+    font-size: 48px;
+    letter-spacing: -3px;
+} */
+
+.sub-title img {
+    width: 45%;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.about-main .sub-title img {
+    width: 55%;
+}
+
+/* nav ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-cir1,
+.nav-cir2,
+.nav-cir3 {
+    width: 100px;
+    height: 100px;
+
+    background-color: #1c8ea2;
+    border-radius: 50%;
+
+    position: fixed;
+}
+
+.nav-cir1 {
+    width: 130px;
+
+    top: -40px;
+    left: -20px;
+}
+
+.nav-cir2 {
+    width: 110px;
+    height: 110px;
+
+    top: -10px;
+    left: -5px;
+}
+
+.nav-cir3 {
+    top: 5px;
+    left: -40px;
+}
+
+/* open-btn2 */
+.open-btn2 {
+    width: 60px;
+    height: 60px;
+    margin: 6px;
+
+    position: relative; /*ボタン内側の基点となるためrelativeを指定*/
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/*ボタン内側*/
+
+.open-btn2 span {
+    height: 4px;
+    background-color: #fffae8;
+    border-radius: 50px;
+
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+
+    transition: all 0.4s; /*アニメーションの設定*/
+}
+
+.open-btn2 span:nth-of-type(1) {
+    top: 22px;
+    width: 60%;
+}
+
+.open-btn2 span:nth-of-type(2) {
+    top: 34px;
+    width: 50%;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.open-btn2.active span:nth-of-type(1) {
+    top: 20px;
+    left: 24px;
+    transform: translateY(6px) rotate(-35deg);
+    width: 50%;
+}
+
+.open-btn2.active span:nth-of-type(2) {
+    top: 32px;
+    left: 24px;
+    transform: translateY(-6px) rotate(35deg);
+    width: 50%;
+}
+
+nav h6 {
+    position: absolute;
+    top: 37px;
+    left: 16px;
+}
+
+/* nav-sns */
+.nav-sns {
+    width: 190px;
+    height: 100px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sns-inst,
+.sns-x {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    display: flex;
+    cursor: pointer;
+}
+
+.sns-inst {
+    margin-right: 10px;
+}
+
+/* .sns-inst i,
+.sns-x i {
+    margin: auto;
+    font-size: 36px;
+    color: #1a1a1a;
+}
+
+.sns-x i {
+    font-size: 21px;
+} */
+
+/* nav-overlay ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.nav-overlay {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #1c8ea2;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+
+    display: none;
+    flex-direction: column;
+
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.nav-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.overlay-content {
+    width: 75%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay-content ul {
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.overlay-content ul li {
+    margin-bottom: 20px;
+}
+
+.overlay-content ul li a {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 24px;
+}
+
+.overlay-content ul li a span {
+    font-size: 16px;
+    line-height: 14px;
+}
+
+/* sect-banner ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* .sect-banner {
+    width: 100%;
+    height: 460px;
+
+    background-color: #ffbd00;
+
+    display: flex;
+}
+
+.sect-banner img {
+    width: 90%;
+    max-width: 351px;
+    margin: auto;
+
+    object-position: 0 20px;
+} */
+
+/* sect-top ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.sect-top {
+    width: 100%;
+    height: 550px;
+
+    background-color: #fffae8;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+
+    /* background-image: url(../images/top-back2.png);
+    background-position: center;
+    background-size: 130%; */
+}
+
+/* .sect-top h1 {
+    width: 100%;
+    margin: 10% 15% 3%;
+
+    font-size: 30px;
+    color: #1a1a1a;
+
+    text-align: left;
+    
+} */
+
+.sect-top h1 {
+    width: 100%;
+
+    font-size: 76px;
+    line-height: 70px;
+    color: #ffbd00;
+
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sect-top h1 span {
+    font-size: 82px;
+    letter-spacing: 10px;
+}
+
+.img-banner {
+    width: 100%;
+    max-width: 390px;
+
+    margin: auto;
+    margin-top: 130px;
+}
+
+.btn-top {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-top a {
+    width: 200px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* sect-main ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.sect-main {
+    width: 100%;
+    height: 900px;
+
+    background-color: #ffbd00;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+}
+
+.main-ep1,
+.main-ep2,
+.main-ep3 {
+    width: 75%;
+    max-width: 300px;
+    height: 280px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #1c8ea2; */
+}
+
+.main-ep1 a,
+.main-ep2 a,
+.main-ep3 a {
+    width: 100%;
+    height: 280px;
+    margin: auto;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    position: relative;
+    z-index: 100;
+}
+
+.main-ep1 a,
+.main-ep3 a {
+    transform: rotate(-5deg);
+}
+
+.main-ep2 a {
+    transform: rotate(5deg);
+}
+
+.main-ep1 img,
+.main-ep2 img,
+.main-ep3 img {
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* episode ticker ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+#marqueeContainer {
+    width: 140%;
+    margin: auto;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marqueeContainer1 {
+    position: absolute;
+    top: 140px;
+    left: -20%;
+
+    transform: rotate(-14deg);
+}
+
+.marqueeContainer2 {
+    position: absolute;
+    top: 450px;
+    left: -20%;
+
+    transform: rotate(14deg);
+}
+
+.marqueeContainer3 {
+    position: absolute;
+    top: 770px;
+    left: -20%;
+
+    transform: rotate(-14deg);
+}
+
+#marqueeText1,
+#marqueeText2,
+#marqueeText3 {
+    display: inline-block;
+    white-space: nowrap;
+    color: #1a1a1a;
+    font-size: 24px;
+}
+
+#marqueeText1,
+#marqueeText3 {
+    animation: marqueeAnimationRtoL 30s linear infinite;
+}
+
+#marqueeText2 {
+    animation: marqueeAnimationLtoR 30s linear infinite;
+}
+
+#marqueeText1:after {
+    content: " Episode 1: About Us. Episode 1: About Us. Episode 1: About Us. Episode 1: About Us. ";
+}
+#marqueeText2:before {
+    content: " Episode 2: Plan & Process. Episode 2: Plan & Process.Episode 2: Plan & Process. Episode 2: Plan & Process. ";
+}
+#marqueeText3:after {
+    content: " Episode 3:Works & Reviews. Episode 3:Works & Reviews.Episode 3:Works & Reviews. Episode 3:Works & Reviews. ";
+}
+
+@keyframes marqueeAnimationRtoL {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes marqueeAnimationLtoR {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+/* fadeIn ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* fadeIn1 */
+.fadeIn1 {
+    animation-name: fadeIn1Anime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn1Anime {
+    from {
+        opacity: 0;
+        transform: translate3d(-600px, 300px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(20px, 40px, 0);
+    }
+}
+
+/* fadeIn2 */
+.fadeIn2 {
+    animation-name: fadeIn2Anime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn2Anime {
+    from {
+        opacity: 0;
+        transform: translate3d(600px, 300px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(-20px, 0, 0);
+    }
+}
+
+/* fadeIn3 */
+.fadeIn3 {
+    animation-name: fadeIn3Anime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn3Anime {
+    from {
+        opacity: 0;
+        transform: translate3d(600px, -200px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(20px, -40px, 0);
+    }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+.fadeIn1Trigger,
+.fadeIn2Trigger,
+.fadeIn3Trigger {
+    opacity: 0;
+}
+
+/* sect-contact ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+.sect-contact {
+    width: 100%;
+    background-color: #fffae8;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 390px;
+
+    margin: auto;
+    padding: 90px 0;
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-cont-top {
+    width: 120px;
+    margin: 18px;
+}
+
+.contact-inst,
+.contact-mail {
+    width: 100%;
+    margin: auto;
+    margin-top: 6px;
+    margin-left: 16%;
+
+    display: flex;
+}
+
+.contact-inst img,
+.contact-mail img {
+    width: 30px;
+    height: 30px;
+
+    margin-right: 6px;
+}
+
+.contact-container p {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+/* contact form -------------------------------- */
+.contact-container {
+    width: 100%;
+}
+
+.contact-form {
+    width: 95%;
+    margin: 10px auto;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+
+    border: 2px solid #1a1a1a;
+    border-radius: 50px;
+    background-color: #fefdf7;
+}
+
+.input-group textarea {
+    height: 200px;
+    resize: vertical;
+    border-radius: 30px;
+}
+
+.input-group button {
+    display: block;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* footer^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+footer {
+    width: 100%;
+    height: 140px;
+}
+
+footer img {
+    width: 100%;
+    height: 130px;
+    /* object-position: 90%; */
+    object-position: center;
+    object-fit: contain;
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+    p {
+        font-size: 24px;
+    }
+
+    /* sect-top */
+    .top-container {
+        width: 80%;
+        max-width: 630px;
+        height: 550px;
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .top-cont-tx,
+    .top-cont-img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        position: relative;
+    }
+
+    .top-cont-tx h1 {
+        margin: auto;
+        display: inline-block;
+
+        font-size: 100px;
+        line-height: 98px;
+        text-wrap: nowrap;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+
+    .sect-top h1 span {
+        font-size: 110px;
+    }
+
+    .top-cont-img img {
+        width: 450px;
+        max-width: 450px;
+        margin: 0 auto;
+
+        object-fit: cover;
+        object-position: 40px 10px;
+
+        position: static;
+    }
+
+    .btn-top {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
