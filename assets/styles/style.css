@@ -106,14 +106,13 @@ p {
 } */
 
 .sub-title img {
-    width: 45%;
+    width: 55%;
     max-width: 300px;
-    margin: auto;
-    margin-top: 12px;
+    margin: 12px auto;
 }
 
 .about-main .sub-title img {
-    width: 55%;
+    margin-bottom: 0;
 }
 
 /* nav ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
@@ -739,7 +738,7 @@ footer img {
     }
 
     /* sect-top */
-    .top-container {
+    /* .top-container {
         width: 80%;
         max-width: 630px;
         height: 550px;
@@ -786,12 +785,5 @@ footer img {
         object-position: 40px 10px;
 
         position: static;
-    }
-
-    .btn-top {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+    } */
 }

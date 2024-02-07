@@ -68,7 +68,7 @@ i {
 
 .plans-container {
     width: 100%;
-    margin: 40px auto;
+    margin: 40px auto 0;
     display: flex;
     flex-direction: column;
 }
@@ -103,9 +103,16 @@ i {
     margin: 8px;
 }
 
+.acco-title-web h5 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
 .basic-plan,
 .standard-plan,
-.premium-plan {
+.premium-plan,
+.design-plan {
     width: 95%;
     max-width: 350px;
 
@@ -117,6 +124,11 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.design-plan {
+    margin: 5px auto 10px;
+    padding: 0;
 }
 
 /* basic plan */
@@ -153,6 +165,7 @@ i {
 
 .plan-tx-top li {
     font-size: 24px;
+    text-wrap: nowrap;
 }
 
 .plan-tx-top li i {
@@ -186,24 +199,29 @@ i {
 /* can-cannot ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 .can-cannot {
     width: 100%;
-    padding: 20px 6%;
-    background-color: #ffbd00;
+    max-width: 390px;
+    padding: 0 6%;
 }
 
-.Q-box{
+.Q-box {
     width: 100%;
     margin: 10px auto;
 }
 
-.Q-box p{
+.Q-box p {
     font-size: 18px;
 }
 
 /* process ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 .process-container {
     width: 100%;
-    padding: 0 6%;
-    margin: 40px auto;
+    padding: 60px 6%;
+    margin: 0 auto;
+    background-color: #fffae8;
+}
+
+.process-container .sub-title p {
+    margin: 0 auto;
 }
 
 .process-acco {
@@ -250,9 +268,22 @@ i {
     transition: all 0.5s ease;
 }
 
+/* acco title web */
+.acco-title-web {
+    padding: 0;
+}
+
+.acco-title-web i {
+    transform: rotate(0deg);
+}
+
+.acco-title-web.close i {
+    transform: translateY(2px) rotate(180deg);
+}
+
 /*アイコンの＋と×*/
-.acco-title::before,
-.acco-title::after {
+.process-container .acco-title::before,
+.process-container .acco-title::after {
     width: 15px;
     height: 4px;
 
@@ -262,27 +293,27 @@ i {
     border-radius: 50px;
     background-color: #2b9264;
 }
-.acco-title::before {
+.process-container .acco-title::before {
     top: 48%;
     left: 15px;
     transform: rotate(0deg);
 }
-.acco-title::after {
+.process-container .acco-title::after {
     top: 48%;
     left: 15px;
     transform: rotate(90deg);
 }
 /*　closeというクラスがついたら形状変化　*/
-.acco-title.close::before {
+.process-container .acco-title.close::before {
     transform: rotate(45deg);
 }
 
-.acco-title.close::after {
+.process-container .acco-title.close::after {
     transform: rotate(-45deg);
 }
 
 /*アコーディオンで現れるエリア*/
-.acco-box {
+.process-container .acco-box {
     margin: 0 3% 3% 3%;
     padding: 3%;
 
@@ -303,18 +334,21 @@ i {
         padding: 3% 6%;
     }
 
+    .can-cannot {
+        max-width: 900px;
+    }
+
     h5.f-color {
         font-size: 28px;
         margin: 8px;
     }
 
-
     /* 注意事項 */
-    .Q-box{
+    .Q-box {
         max-width: 800px;
     }
 
-    .Q-box p{
+    .Q-box p {
         font-size: 24px;
     }
 
