@@ -61,9 +61,18 @@ font-family: 'Yomogi', cursive;
     margin: 0 auto;
 }
 
+.slider a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .slider img {
     width: 60vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    max-width: 300px;
     height: auto;
+    margin: auto;
+
     border-radius: 50px;
 }
 
@@ -250,22 +259,23 @@ font-family: 'Yomogi', cursive;
 
 @media screen and (min-width: 768px) {
     .slider {
-        width: 90%;
-        max-width: 900px;
-    }
-
-    .slider a {
-        display: flex;
-        justify-content: center;
+        width: 70%;
+        max-width: 700px;
     }
 
     .slider img {
         /* width: 60vw; */
-        width: 40vw;
+        width: 30vw;
+        max-width: 350px;
+    }
+
+    .slider-desc {
+        width: 30vw;
     }
 
     .slider-desc li {
         margin-left: 8%;
+        font-size: 20px;
     }
 
     /* reviews */

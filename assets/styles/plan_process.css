@@ -200,6 +200,7 @@ i {
 .can-cannot {
     width: 100%;
     max-width: 390px;
+    margin: auto;
     padding: 0 6%;
 }
 
